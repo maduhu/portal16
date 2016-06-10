@@ -1,7 +1,7 @@
 {# Generic tabular view renderer with tabs vertically stacking on the left column #}
 {% macro metadataRenderer(elements) %}
     <nav class="col-md-4 metadata-nav">
-        <ul class="nav">
+        <ul class="nav" ng-class="{'affix': 1}">
             {% for element in elements %}
                 <li du-scrollspy="{$ element.property $}"><a href="#{$ element.property $}">{$ element.title $}</a></li>
             {% endfor %}
